@@ -12,3 +12,9 @@
       - [APP.js 파일이 있는 곳으로 이동해서 ]
   - npm start 
       - [입력시 서버 구동]
+
+# 다른 프로젝트 clone 해서 실행하는 방법
+  1. 해당 위치로 cd (경로) # cd ..(이전 경로로)
+  2. npm install
+  3. npm start
+
