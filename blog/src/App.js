@@ -1,21 +1,27 @@
-import React from 'react';
-import logo from '.logo.svg'
-import './App.css'
+import {useState} from 'react'
 
-function App(){
-  const [time, setTime]= useState(1);
+function App() {
+  const [names, setName] = useState(['홍길동', '김민수']);
+  const [input, setInput] = useState('')
 
-  const handleClick = () =>{
-    setTime(time+1);
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
   };
 
-  return(
-       <div>
-        <span>현재 시간 : {time}시 </span>
-        <button onClick={handleClick}>Update</button>
-       </div>
-        
-  )
+  
+
+  console.log('업데이트!!');
+
+  return (
+    <div>
+      <input type='text' value={input} onChange={handleInputChange}></input>
+            <button onClick={handleInputChange}>Update</button>
+            {names.map((name, idx) =>{
+              return <p key={idx}>{name}</p>
+            })}
+    </div>
+
+  );
 }
 
 export default App;
